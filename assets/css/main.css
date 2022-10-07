@@ -1,7 +1,22 @@
+/* roboto-mono-regular - latin */
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/roboto-mono-v22-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/roboto-mono-v22-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-mono-v22-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-mono-v22-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-mono-v22-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/roboto-mono-v22-latin-regular.svg#RobotoMono') format('svg'); /* Legacy iOS */
+  }
+
 body {
     background-color: #33c;
     color: white;
-    font-size: 22px;
+    font-size: 18px;
+    font-family: "Roboto Mono", "Comic Sans MS";
 }
 
 body > div {
@@ -10,6 +25,14 @@ body > div {
 
 .d-flex {
     display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
 .justify-content-center {
@@ -55,8 +78,16 @@ body > div {
 
 .content {
     padding-top: 2rem;
-    max-width: 80vw;
-    margin: 0 auto;
+    margin-left: 2rem;
+}
+
+.sidebar {
+    width: 20%;
+    padding: 2rem;
+}
+
+.content {
+    width: 80%;
 }
 
 @media (max-width: 1600px) {

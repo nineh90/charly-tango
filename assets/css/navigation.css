@@ -1,0 +1,24 @@
+.akkordeon-header > div, .akkordeon-content a {
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    width: 220px;
+    font-size: 14px;
+}
+
+.akkordeon-header > div {
+    color: #33c;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+}
+
+.akkordeon-content a:hover {
+    color: #33c;
+    background-color: white;
+}
+
+.akkordeon-content-wrapper {
+    margin-bottom: 2rem;
+}
