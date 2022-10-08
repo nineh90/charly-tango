@@ -2,10 +2,10 @@
 <div class="navigation-container">
     <div class="akkordeon-wrapper">
         <div class="akkordeon-content-wrapper">
-            <div class="akkordeon-header d-flex flex-wrap justify-content-center">
+            <div class="akkordeon-header d-flex flex-wrap justify-content-center" onclick="openAkkordeonContent(event)">
                 <div>CT - Hauptmenü</div>
             </div>
-            <div class="akkordeon-content d-flex flex-wrap justify-content-center" onclick="openAkkordeonContent($event)">
+            <div class="akkordeon-content d-flex flex-wrap justify-content-center">
                 <a href="ueber.html">Über CharlyTango</a>
                 <a href="heute.html">CharlyTango heute</a>
                 <a href="heute.html">In Gedanken</a>
@@ -22,26 +22,24 @@
         </div>
 
         <div class="akkordeon-content-wrapper">
-            <div class="akkordeon-header d-flex flex-wrap justify-content-center">
+            <div class="akkordeon-header d-flex flex-wrap justify-content-center" onclick="openAkkordeonContent(event)">
                 <div>TeamSpeak 3</div>
             </div>
-            <div class="akkordeon-content d-none flex-wrap justify-content-center" onclick="openAkkordeonContent($event)">
+            <div class="akkordeon-content d-none flex-wrap justify-content-center">
                 <a href="ueber.html">TS3 Download</a>
                 <a href="heute.html">TS3 User Installationshilfe</a>
-                <a href="heute.html">TS3 GW Installtionshilfe</a>
-                <a href="heute.html">TS-Gateway Commander</a>
-                <a href="heute.html">TS3 Schnellconnect</a>
+                <a href="ts3server://81.169.211.205">TS3 Schnellconnect</a>
                 <a href="heute.html">Blick auf TS3 Server</a>
             </div>
         </div>
 
         <div class="akkordeon-content-wrapper">
-            <div class="akkordeon-header d-flex flex-wrap justify-content-center">
+            <div class="akkordeon-header d-flex flex-wrap justify-content-center" onclick="openAkkordeonContent(event)">
                 <div>GW-Technik</div>
             </div>
-            <div class="akkordeon-content d-none flex-wrap justify-content-center" onclick="openAkkordeonContent($event)">
+            <div class="akkordeon-content d-none flex-wrap justify-content-center">
                 <a href="ueber.html">Einfaches Interface</a>
-                <a href="heute.html">Soundkarteninterface</a>
+                <a href="https://freiesfunknetz.com/viewpage.php?page_id=258">Soundkarteninterface</a>
                 <a href="heute.html">Mikrofonbelegung CB</a>
                 <a href="heute.html">Mikrofonbelegung PMR</a>
                 <a href="heute.html">Anschluss Funkgerät & PC</a>
@@ -49,13 +47,122 @@
         </div> 
 
         <div class="akkordeon-content-wrapper">
-            <div class="akkordeon-header d-flex flex-wrap justify-content-center">
+            <div class="akkordeon-header d-flex flex-wrap justify-content-center" onclick="openAkkordeonContent(event)">
                 <div>Wetter Info</div>
             </div>
-            <div class="akkordeon-content d-none flex-wrap justify-content-center" onclick="openAkkordeonContent($event)">
-                <a href="ueber.html">Blitzradar</a>
-                <a href="heute.html">Wetterwarnung</a>
-                <a href="heute.html">Blitzortung</a>
+            <div class="akkordeon-content d-none flex-wrap justify-content-center">
+                <a href="http://www.unwetterzentrale.de/uwz/">Wetterwarnung</a>
+                <a href="https://www.blitzortung.org/en/live_lightning_maps.php">Blitzortung</a>
+            </div>
+        </div>
+
+        <div class="akkordeon-content-wrapper">
+            <div class="akkordeon-header d-flex flex-wrap justify-content-center" onclick="openAkkordeonContent(event)">
+                <div>Funk Bereich</div>
+            </div>
+            <div class="akkordeon-content d-none flex-wrap justify-content-center">
+                <a href="">Was sind Freie Funknetze</a>
+                <a href="">Geschichte des CB-Funk</a>
+                <a href="">Bandplan CB-Funk 11m</a>
+                <a href="">Bandplan Freenet 149Mhz</a>
+                <a href="">Bandplan PMR 446Mhz</a>
+                <a href="">CB-Funk Einsatzgebiete</a>
+                <a href="">CB-Funk Betriebsarten</a>
+                <a href="">Abkürzungen im CB-Funk</a>
+                <a href="">CB-Sprache</a>
+                <a href="">Regeln</a>
+                <a href="">Notruf</a>
+                <a href="">CB-Funk SWR</a>
+                <a href="">Buchstabier-Alphabet</a>
+            </div>
+        </div>
+
+        <div class="akkordeon-content-wrapper">
+            <div class="akkordeon-header d-flex flex-wrap justify-content-center" onclick="openAkkordeonContent(event)">
+                <div>Allgemeines</div>
+            </div>
+            <div class="akkordeon-content d-none flex-wrap justify-content-center">
+                <a href="https://www.teamviewer.com/de/">Teamviewer</a>
+                <a href="https://www.afup.a36.de/">AFU - Prüfung</a>
+                <a href="">CB-Funk Schutzzone</a>
+                <a href="">Hochfrequenzwellen</a>
+                <a href="">Wellenausbreitung</a>
+                <a href="">HF - Störungen</a>
+            </div>
+        </div>
+
+        <div class="akkordeon-content-wrapper">
+            <div class="akkordeon-header d-flex flex-wrap justify-content-center" onclick="openAkkordeonContent(event)">
+                <div>PR - Technik</div>
+            </div>
+            <div class="akkordeon-content d-none flex-wrap justify-content-center">
+                <a href="">Geschichte von PR</a>
+                <a href="">Was ist Packet Radio</a>
+                <a href="">PR Betriebsarten</a>
+                <a href="">PR auf CB - Funk</a>
+                <a href="">Packet Radio Netz</a>
+            </div>
+        </div>
+
+        <div class="akkordeon-content-wrapper">
+            <div class="akkordeon-header d-flex flex-wrap justify-content-center" onclick="openAkkordeonContent(event)">
+                <div>Interace SSTV</div>
+            </div>
+            <div class="akkordeon-content d-none flex-wrap justify-content-center">
+                <a href="">Download Interace SSTV</a>
+            </div>
+        </div>
+
+        <div class="akkordeon-content-wrapper">
+            <div class="akkordeon-header d-flex flex-wrap justify-content-center" onclick="openAkkordeonContent(event)">
+                <div>Allgemeine News</div>
+            </div>
+            <div class="akkordeon-content d-none flex-wrap justify-content-center">
+                <a href="https://funkmagazin.de/">Funkmagazin</a>
+                <a href="https://www.darc.de/home/">DARC</a>
+            </div>
+        </div>
+
+        <div class="akkordeon-content-wrapper">
+            <div class="akkordeon-header d-flex flex-wrap justify-content-center" onclick="openAkkordeonContent(event)">
+                <div>Live</div>
+            </div>
+            <div class="akkordeon-content d-none flex-wrap justify-content-center">
+                <a href="http://funknetzdeutschland.ddns.net:8000/stream">Funknetzdeutschland</a>
+                <a href="http://funknetzdeutschland.ddnsking.com:8073/">WEB SDR Live</a>
+                <a class="navigation-image" href="http://www.websdr.org/">
+                    <img src="../../assets/images/funk3.gif" width="200px"/>
+                </a>
+            </div>
+        </div>
+
+        <div class="akkordeon-content-wrapper">
+            <div class="akkordeon-header d-flex flex-wrap justify-content-center" onclick="openAkkordeonContent(event)">
+                <div>DX Informationen</div>
+            </div>
+            <div class="akkordeon-content d-none flex-wrap justify-content-center">
+                <a class="navigation-image" href="http://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!">
+                    <img src="http://www.hamqsl.com/solarvhf.php">
+                </a>
+                <a class="navigation-image" href="http://www.n3kl.org/sun/noaa.html" title="Click to add Solar-Terrestrial Data to your website!">
+                    <img src="http://www.n3kl.org/sun/images/status.gif?">
+                </a>
+                <a class="navigation-image" href="http://www.n3kl.org/sun/noaa.html" title="Click to add Solar-Terrestrial Data to your website!">
+                    <span>Solar X-Ray</span>
+                    <img src="http://www.n3kl.org/sun/images/kpstatus.gif?">
+                </a>
+                <a class="navigation-image" href="http://www.xs4all.nl/~amunters/monitor.html" title="Click to add Solar-Terrestrial Data to your website!">
+                    <span>Geomagnetic Field</span>
+                    <img src="http://www.xs4all.nl/~amunters/aurorastatus.gif?">
+                </a>
+                <a class="navigation-image" href="http://www.xs4all.nl/~amunters/monitor.html" title="Click to add Solar-Terrestrial Data to your website!">
+                    <p style="margin: 0;">VHF Aurora</p>
+                    <img src="http://www.xs4all.nl/~amunters/aurorastatus.gif?">
+                </a>
+                <a class="navigation-image" href="http://www.xs4all.nl/~amunters/monitor.html" title="Click to add Solar-Terrestrial Data to your website!">
+                    <span>144MHz E-Skip in EU</span>
+                    <img src="http://www.xs4all.nl/~amunters/eskipstatusNA.gif?">
+                </a>
             </div>
         </div>
     </div>

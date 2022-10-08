@@ -20,5 +20,17 @@
 }
 
 .akkordeon-content-wrapper {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.akkordeon-content a.navigation-image {
+    border: none;
+}
+
+.akkordeon-content a.navigation-image:hover {
+    background-color: transparent;
+}
+
+.akkordeon-content a.navigation-image:hover span, .akkordeon-content a.navigation-image:hover p {
+    color: white;
 }

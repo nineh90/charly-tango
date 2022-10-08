@@ -19,8 +19,10 @@ async function includeHTML() {
 
 function openAkkordeonContent(e) {
     let openContainer = document.getElementsByClassName('akkordeon-content d-flex');
+    let contentContainer =  e.currentTarget.parentElement.children[1];
+    openContainer[0].classList.add('d-none');
     openContainer[0].classList.remove('d-flex');
-    openContainer[0].classList.remove('d-none');
-    e.currentTarget.classList.remove('d-none');
-    e.currentTarget.classList.add('d-flex');
+
+    contentContainer.classList.remove('d-none');
+    contentContainer.classList.add('d-flex');
 }
