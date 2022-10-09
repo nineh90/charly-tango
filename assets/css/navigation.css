@@ -17,6 +17,7 @@
 .akkordeon-content a:hover {
     color: #33c;
     background-color: white;
+    cursor: pointer;
 }
 
 .akkordeon-content-wrapper {

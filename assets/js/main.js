@@ -1,8 +1,3 @@
-async function init() {
-    await includeHTML();
-    document.getElementById('headline').innerHTML = 'Herzlich willkommen!';
-}
-
 async function includeHTML() {
     let includeElements = document.querySelectorAll('[w3-include-html]');
     for (let i = 0; i < includeElements.length; i++) {
@@ -25,4 +20,12 @@ function openAkkordeonContent(e) {
 
     contentContainer.classList.remove('d-none');
     contentContainer.classList.add('d-flex');
+}
+
+function openLink(link) {
+    let template = document.getElementById('content-template');
+    if (template) {
+        template.setAttribute("w3-include-html", "./assets/templates/subpages/" + link + ".html");
+        includeHTML();
+    }
 }
