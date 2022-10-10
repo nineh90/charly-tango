@@ -1,4 +1,4 @@
-async function includeHTML() {
+async function includeHTML(link) {
     let includeElements = document.querySelectorAll('[w3-include-html]');
     for (let i = 0; i < includeElements.length; i++) {
         const element = includeElements[i];
@@ -6,6 +6,9 @@ async function includeHTML() {
         let resp = await fetch(file);
         if (resp.ok) {
             element.innerHTML = await resp.text();
+            if (link === 'prefix_liste') {
+                await loadPrefixList();
+            }
         } else {
             element.innerHTML = 'Page not found';
         }
@@ -26,6 +29,6 @@ function openLink(link) {
     let template = document.getElementById('content-template');
     if (template) {
         template.setAttribute("w3-include-html", "./assets/templates/subpages/" + link + ".html");
-        includeHTML();
+        includeHTML(link);
     }
 }
