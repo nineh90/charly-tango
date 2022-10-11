@@ -25,10 +25,18 @@ function openAkkordeonContent(e) {
     contentContainer.classList.add('d-flex');
 }
 
-function openLink(link) {
+function openLink(folder, link) {
     let template = document.getElementById('content-template');
     if (template) {
-        template.setAttribute("w3-include-html", "./assets/templates/subpages/" + link + ".html");
+        template.setAttribute("w3-include-html", "./assets/templates/" + folder + "/" + link + ".html");
+        includeHTML(link);
+    }
+}
+
+function openMainLink(link) {
+    let template = document.getElementById('content-template');
+    if (template) {
+        template.setAttribute("w3-include-html", "./assets/templates/main/" + link + ".html");
         includeHTML(link);
     }
 }
