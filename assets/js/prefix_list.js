@@ -24,41 +24,37 @@ const PREFIXLIST = [
     "AUSTRAL ISLAND", "MARQUESA ISLAND", "TEMOSU", "PALESTINA", "GOZO ISLAND", "CHESTERFIELD ISLAND"
 ]
 
-function loadPrefixList() {
-    setTimeout(() => {
-        let container = document.getElementById('prefix-list-container');
-        if (container) {
-            container.innerHTML = '';
-            for (let i = 0; i < PREFIXLIST.length; i++) {
-                const wrapper = document.createElement("div");
-                wrapper.classList.add("prefix-list-item-wrapper");
-                wrapper.classList.add("w-33");
-                wrapper.classList.add("d-flex");
-                wrapper.classList.add("justify-content-center");
-                wrapper.classList.add("align-items-center");
-                wrapper.classList.add("margin-bottom-1");
-                
-                const contentWrapper = document.createElement("div");
-                contentWrapper.classList.add("content-wrapper");
-                contentWrapper.classList.add("d-flex");
+async function loadPrefixList() {
+    let container = document.getElementById('prefix-list-container');
+    if (container) {
+        container.innerHTML = '';
+        for (let i = 0; i < PREFIXLIST.length; i++) {
+            const wrapper = document.createElement("div");
+            wrapper.classList.add("prefix-list-item-wrapper");
+            wrapper.classList.add("w-33");
+            wrapper.classList.add("d-flex");
+            wrapper.classList.add("justify-content-center");
+            wrapper.classList.add("align-items-center");
+            wrapper.classList.add("margin-bottom-1");
+            
+            const contentWrapper = document.createElement("div");
+            contentWrapper.classList.add("content-wrapper");
+            contentWrapper.classList.add("d-flex");
 
-                const indexWrapper = document.createElement("div");
-                indexWrapper.classList.add("index-wrapper");
-                indexWrapper.classList.add("padding-right-1");
-                indexWrapper.textContent = i + 1;
+            const indexWrapper = document.createElement("div");
+            indexWrapper.classList.add("index-wrapper");
+            indexWrapper.classList.add("padding-right-1");
+            indexWrapper.textContent = i + 1;
 
-                const countryWrapper = document.createElement("div");
-                countryWrapper.classList.add("country-wrapper");
-                countryWrapper.classList.add("text-align-left");
-                countryWrapper.textContent = PREFIXLIST[i];
+            const countryWrapper = document.createElement("div");
+            countryWrapper.classList.add("country-wrapper");
+            countryWrapper.classList.add("text-align-left");
+            countryWrapper.textContent = PREFIXLIST[i];
 
-                contentWrapper.appendChild(indexWrapper);
-                contentWrapper.appendChild(countryWrapper);
-                wrapper.appendChild(contentWrapper);
-                container.appendChild(wrapper);
-            }
-        } else {
-            loadPrefixList();
+            contentWrapper.appendChild(indexWrapper);
+            contentWrapper.appendChild(countryWrapper);
+            wrapper.appendChild(contentWrapper);
+            container.appendChild(wrapper);
         }
-    })
+    } 
 }

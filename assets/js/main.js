@@ -1,4 +1,4 @@
-async function includeHTML(link) {
+async function includeHTML() {
     let includeElements = document.querySelectorAll('[w3-include-html]');
     for (let i = 0; i < includeElements.length; i++) {
         const element = includeElements[i];
@@ -6,8 +6,11 @@ async function includeHTML(link) {
         let resp = await fetch(file);
         if (resp.ok) {
             element.innerHTML = await resp.text();
+            let link = resp.url.substring(resp.url.search('subpages') + 9, resp.url.length - 5);
             if (link === 'prefix_liste') {
                 await loadPrefixList();
+            } else if (link === 'neue_mitglieder') {
+                await loadMemberList();
             }
         } else {
             element.innerHTML = 'Page not found';
@@ -23,20 +26,4 @@ function openAkkordeonContent(e) {
 
     contentContainer.classList.remove('d-none');
     contentContainer.classList.add('d-flex');
-}
-
-function openLink(folder, link) {
-    let template = document.getElementById('content-template');
-    if (template) {
-        template.setAttribute("w3-include-html", "./assets/templates/" + folder + "/" + link + ".html");
-        includeHTML(link);
-    }
-}
-
-function openMainLink(link) {
-    let template = document.getElementById('content-template');
-    if (template) {
-        template.setAttribute("w3-include-html", "./assets/templates/main/" + link + ".html");
-        includeHTML(link);
-    }
 }
