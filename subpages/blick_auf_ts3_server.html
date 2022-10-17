@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de - en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/navigation.css">
+    <script src="../assets/js/main.js"></script>
+    <script language="JavaScript">
+        function FP_swapImg() {//v1.0
+         var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+         n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+         elm.$src=elm.src; elm.src=args[n+1]; } }
+        }
+        
+        function FP_preloadImgs() {//v1.0
+         var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+         for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+        }
+        
+        function FP_getObjectByID(id,o) {//v1.0
+         var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+         else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+         if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+         for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+         f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+         for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+         return null;
+        }
+        </script>
+        <script src="https://static.tsviewer.com/short_expire/js/ts3viewer_loader.js"></script>
+        <script>
+        var ts3v_url_1 = "https://www.tsviewer.com/ts3viewer.php?ID=1125941&text=757575&text_size=12&text_family=1&text_s_color=000000&text_s_weight=bold&text_s_style=normal&text_s_variant=normal&text_s_decoration=none&text_i_color=&text_i_weight=normal&text_i_style=normal&text_i_variant=normal&text_i_decoration=none&text_c_color=&text_c_weight=normal&text_c_style=normal&text_c_variant=normal&text_c_decoration=none&text_u_color=000000&text_u_weight=normal&text_u_style=normal&text_u_variant=normal&text_u_decoration=none&text_s_color_h=&text_s_weight_h=bold&text_s_style_h=normal&text_s_variant_h=normal&text_s_decoration_h=none&text_i_color_h=000000&text_i_weight_h=bold&text_i_style_h=normal&text_i_variant_h=normal&text_i_decoration_h=none&text_c_color_h=&text_c_weight_h=normal&text_c_style_h=normal&text_c_variant_h=normal&text_c_decoration_h=none&text_u_color_h=&text_u_weight_h=bold&text_u_style_h=normal&text_u_variant_h=normal&text_u_decoration_h=none&iconset=default";
+        ts3v_display.init(ts3v_url_1, 1125941, 100);
+        </script>
+</head>
+<body class="viewHeight">
+    <div w3-include-html="../assets/templates/header/header.html"></div>
+    <div class="main-content-wrapper d-flex">
+        <div class="sidebar" w3-include-html="../assets/templates/main/navigation.html"></div>
+        <div id="content-template" class="content main-content" w3-include-html="../assets/templates/subpages/blick_auf_ts3_server.html"></div>
+    </div>
+    <div w3-include-html="../assets/templates/footer/footer.html"></div>
+    <script>
+        includeHTML();
+    </script> 
+</body>
+</html>
