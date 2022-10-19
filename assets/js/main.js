@@ -1,3 +1,24 @@
+function setNavigationLink() {
+    setTimeout(() => {
+        const navigation = document.getElementById('navigation');
+        if (navigation) {
+            let id = window.location.search.substr(4);
+            let currentLink = navigation.getElementsByTagName('a')[id - 1];
+            currentLink.classList.add('active');
+            let allNavLinks = document.getElementsByClassName('akkordeon-content');
+            for (let i = 0 ; i < allNavLinks.length ; i++) {
+                allNavLinks[i].classList.add('d-none');
+                allNavLinks[i].classList.remove('d-flex');
+            }
+            currentLink.parentElement.classList.remove('d-none');
+            currentLink.parentElement.classList.add('d-flex');
+        } else {
+            setNavigationLink();
+        }
+    });
+}
+setNavigationLink();
+
 async function includeHTML() {
     let includeElements = document.querySelectorAll('[w3-include-html]');
     for (let i = 0; i < includeElements.length; i++) {

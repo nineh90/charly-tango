@@ -14,7 +14,7 @@
     cursor: pointer;
 }
 
-.akkordeon-content a:hover {
+.akkordeon-content a:hover, .akkordeon-content a.active {
     color: #33c;
     background-color: white;
     cursor: pointer;
