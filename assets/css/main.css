@@ -192,6 +192,8 @@ h1 {
 table {
     border: 0;
     border-spacing: 0px;
+    width: 100%;
+    text-align: left;
 }
 
 table th {
