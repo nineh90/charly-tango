@@ -1,0 +1,48 @@
+<div class="content">
+    <div class="font-weight-bold">
+        <h1>Wie funktioniert Paket Radio</h1>
+        <div class="cable-image">
+            <img src="../assets/images/cable.gif" />
+        </div>
+    </div>
+    <div class="d-flex align-items-center flex-direction-column">
+        <p>
+            Packet-Radio ist ein besonders kostengünstiges Verfahren zur drahtlosen Datenübertragung. Packet-Radio wird von Funkamateuren und CB-Funkern betrieben, es gibt keine Betreiberorganisation und natürlich keine Onlinegebühren. Aufgrund seiner hervorragenden Eigenschaften wird Packet-Radio auch kommerziell und im Bereich Forschung eingesetzt.<br>
+            <br>
+            Packet-Radio ist ein Verfahren, mit dem man über Funk Daten senden und empfangen kann. Die Daten werden meist über einen Computer eingegeben, der Packet-Radio-Controller erzeugt daraus Töne, die per Funk übertragen werden können. Der Packet-Radio-Controller der Gegenstation empfängt diese Töne und wandelt sie wieder in computerlesbare Daten um. Grundsätzlich unterscheidet sich Packet-Radio von der historischen Betriebsart RTTY (Funkfernschreiben) dadurch, daß die Daten nicht kontinuierlich gesendet, sondern zu Paketen zusammengefasst, welche dann ausgesendet werden. Daher der Name Packet-Radio.
+            Im Amateurfunk wird meist 9600 Baud FSK Modulation benutzt. Dieses Verfahren ist wesentlich schneller als die herkömmliche 1200 Baud AFSK-Technik, kann jedoch nur mit Amateurfunkgeräten verwendet werden. Im CB-Funk sind 1200 Baud üblich.
+            1981 begannen Funkamateure in den USA dieses Übertragungsprotokoll zu definieren, mittlerweile hat sich daraus ein weltumspannendes privates Datennetz entwickelt.
+            <br>
+            Viele Stationen auf gleicher Frequenz / gleichem Kanal<br>
+            <br>
+            Mit jedem Datenpaket wird (ausser den eigentlichen Nutzdaten) noch das Rufzeichen des Absenders und des Empfängers übertragen. Dadurch ist es möglich, dass mehrere Packet-Radio Verbindungen auf derselben Frequenz stattfinden ohne sich zu stören: Jeder Empfänger sucht sich aus der Vielzahl der mitgehörten Pakete nur diejenigen heraus, die für ihn bestimmt sind. Jeder Sender prüft, bevor er sendet, ob die Frequenz frei ist. Dadurch werden Kollisionen vermieden und die Frequenz kann für viele Benutzer gleichzeitig genutzt werden.<br>
+            <br>
+            Übertragungsfehler ausgeschlossen<br>
+            <br>
+            In den Datenpaketen sind Prüfsummen enthalten, die es ermöglichen, Übertragungsfehler zu erkennen. Nur 100% fehlerfreie Pakete werden vom Empfänger akzeptiert und auf dem Bildschirm angezeigt. Richtig empfangene Pakete werden bestätigt. Unbestätigte Pakete werden so lange wiederholt, bis sie fehlerfrei beim Empfänger angekommen sind.<br>
+            <br>
+            Große Reichweite durch Digipeater<br>
+            <br>
+            Der Packet-Radio-Verkehr kann direkt zwischen zwei Funkpartnern stattfinden. Zusätzlich können die Datenpakete jedoch auch über mehrere Zwischenstationen (Digipeater) weitergereicht werden, was die Reichweite erheblich vergrößert. Beim klassischen 'digipeating' kann ein Datenpaket über bis zu 7 Zwischenstationen weitergereicht werden bis es beim Empfänger ankommt.<br>
+            <br>
+            Weltweites Packet-Netzwerk<br>
+            <br>
+            Das sehr gut ausgebaute Amateurfunk-Digipeater-Netz in Deutschland arbeitet mit leistungsfähigen Knotenrechnern, die ein von einem Benutzer empfangenes Datenpaket über Richtfunkstrecken gezielt zu dem Knotenrechner hin vermitteln, in dessen Nähe der gewünschte Funkpartner sitzt. Der Packet-Radio Benutzer muß sich gerätetechnisch also nur bemühen, einen sicheren Zugang zu einem beliebigen Knotenrechner im Packet-Radio Netz zu bekommen.
+        </p>
+        <h2>Diese Geräte benötigt man für Paket Radio</h2>
+        <h3>Funkgerät</h3>
+        <p>
+            Für 1200 Baud Betrieb eignet sich praktisch jedes beliebige 2m oder 70cm Funkgerät sowie fast jedes FM-CB-Funkgerät. DerPacket-Radio-Controller wird an die Mikrofon- und Lautsprecherbuchse angeschlossen. Geräte, bei denen das Mikrophon fest angeschlossen ist, oder bei denen ein eingebautes Mikrofon verwendet wird (Handfunkgeräte ohne Anschluss für externe Mikrofone) sind nicht geeignet.Falls Sie 9600 Baud Packet machen wollen, sollten Sie ein Gerät verwenden, das sich gut für Packet modifizieren läßt. Ideal sind Quarzgesteuerte Geräte, die hervorragend kurze Sende/Empfangs-Umschaltzeiten besitzen. 1200 Baud AFSK ist auch die im CB-Funk übliche Betriebsart.
+        </p>
+        <div class="cable-image">
+            <img src="../assets/images/nietklikken.gif" />
+        </div>
+        <h3>Computer</h3>
+        <p>Packet-Radio-Modems und TNC´s können mit jedem Computer betrieben werden, der eine serielle Schnittstelle (RS232, V24) besitzt. Ideal sin IBM-kompatible (PC, AT, 386, 486 etc.), Laptops, Notebooks etc.. Genau so gut lässt sich ein Atari-ST oder Amiga anschließen. Für alle diese Rechner sind Terminalprogramme verfügbar, mit denen man sehr komfortabel Daten senden und empfangen kann.        </p>
+        <div class="cable-image">
+            <img src="../assets/images/RTEmagicC_computer_gif.gif" />
+        </div>
+        <h3>Packet-Radio-Controller / Modem oder TNC</h3>
+        <p>Der Packet-Radio-Controller setzt die NF-Signale des Funkgeräts in digitale Informationen um und überträgt sie zum Computer und umgekehrt. Der Packet-Radio-Controller kontrolliert den korrekten Aufbau der Datenpakete und analysiert die empfangenen Pakete. Er wird über die serielle Schnittstelle angeschlossen, am Funkgerät verwendet man die Anschlüsse Mikrofon, Lautsprecher und PTT. (für 1200 Baud) bzw. Modulator, Demodulator und PTT für 9600 Baud)</p>
+    </div>
+</div> 

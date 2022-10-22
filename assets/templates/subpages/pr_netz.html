@@ -1,0 +1,112 @@
+<div class="content">
+    <div class="font-weight-bold">
+        <h1>Die Netze von Paket Radio</h1>
+        <div class="cable-image">
+            <img src="../assets/images/cable.gif" />
+        </div>
+    </div>
+    <div class="d-flex align-items-center flex-direction-column">
+		<p>Mit Packet-Radio können auf einfache Weise leistungsfähige Datennetze aufgebaut werden. Man unterscheidet in einem Packet-Netz die User (Benutzer), die die Daten senden und empfangen, und die Nodes (Netzknoten), die die Daten empfangen und in Richtung zum Empfänger weitervermitteln.<br>
+			<br>
+			Die Nodes sind intelligente Systeme, die die aktuelle Struktur des Netzes kennen und damit in der Lage sind, die Datenpakete auf dem optimalen Weg durchs Netz zu schleusen.<br>
+			<br>
+			Während der User mit einem Packet-Radio-Controller oder Steckermodem schon am Datenverkehr teilnehmen kann, wird bei einem Netzknoten ein leistungsfähiger Rechner (z.B. TNC3S mit X-Net Software, PC, RMNC) benötigt.</p>
+		<h3>Geschichtliche Entwicklung</h3>
+		<p>Der Begriff Packet-Radio wurde bereits 1981 von der Tucson Amateur Packet Radio Gruppe (TAPR) geprägt. Für den Daten-Funkverkehr wurde ein leistungsfähiges Protokoll unter der Bezeichnung "AX.25" festgelegt, das sich an die existierenden X.25 Protokolle der drahtgebundenen Datenübertragung anlehnt und wesentliche Erweiterungen für den Gebrauch in Funknetzen besitzt.<br>
+			<br>
+			Werden im Netz nur Standard-TNC benutzt, so sind Verbindungen mit großer Reichweite möglich, indem man beim Verbindungsaufbau Zwischenstationen (Digipeater) angibt, also z.B. 'CONNECT C via A, B'. Bevor man eine Verbindung startet muß man probieren, welche Zwischenstationen möglich und sinnvoll sind. Bei Ausfall eines Digipeaters muß der Benutzer neue Wege für die Verbindung suchen. Meist sind mehrere Wege möglich, man muß anhand von praktischen Erfahrungen denjenigen Weg finden, auf dem die Daten am schnellsten und am zuverlässigsten in Richtung zur Gegenstation weitergesendet werden.<br>
+			<br>
+			In den USA entwickelten Ron Raikes, WA8DED und Mike Busch, W6IXU um 1985 ein Programm für das TNC2 mit der Bezeichnung 'Net-ROM'. Das EPROM wurde in ein TNC2 eingebaut und erweiterte die Möglichkeiten von Packet-Radio wesentlich. Die mit Net-ROM ausgestatteten Netzknoten tauschen regelmäßig Daten über den Zustand des Netzes aus und ermittelten dabei selbständig die optimalen Verbindungswege. Netzknoten aus mehreren zusammengeschalteten TNCs können Funkstrecken auf verschiedenen Frequenzen bedienen und die Daten intelligent in die gewünschte Richtung weitersenden. Bei Veränderungen im Netz, z.B. Ausfall einer Verbindung, reagieren die Knoten dynamisch und ändern die gespeicherten Tabellen so, dass die fehlende Strecke durch alternative Wege ersetzt wird.<br>
+			<br>
+			Von der Nord-Link Gruppe wurde die TheNet Software entwickelt, die zu Net-ROM kompatibel war und sich in Deutschland rasch verbreitete. Da die Leistungsfähigkeit der Z80 Prozessoren im TNC2 rasch ausgeschöpft war, wurden hauptsächlich von Nord-Link andere Knoten-Architekturen entwickelt, bei denen die wesentlichen Funktionen eines Netzknotens von einem PC-Programm erledigt wurden und die TNC2 nur noch zur Steuerung der Modems dienten. Das Problem bei diesen Lösungen war, dass die maximale Gesamtdatenrate auf 19200 oder 38400 Baud beschränkt war.<br>
+			<br>
+			Als 1992 mit dem TNC3S erstmals ein TNC mit 16 Bit CPU erhältlich war, wurde die vorhandene TheNet Software auf diese Hardware portiert. Da das TNC3S mehrere HDLC-Schnittstellen gleichzeitig bedienen kann, konnte man mit nur einem Gerät bereits Knoten mit drei Modems bzw. Funkstrecken realisieren. Durch die für serielle Kommunikation optimierte Architektur der 68302-CPU wurde die Übertragungsgeschwindigkeit um den Faktor 100 gesteigert. Mehrere TNC3 konnten über einen seriellen High-Speed-Bus mit über 1 Mbit/s Datenrate zu leistungsfähigen Knoten verknüpft werden. Während die TNC2 auf 32 kByte Speicher beschränkt sind, kann das TNC3 bis zu 2 Mbyte adressieren, also das 64-fache. Durch die 16/32 Bit Architektur der CPU laufen die Rechenprozesse wesentlich schneller ab. Die bei TNC2 Knoten auftretenden Verzögerungen durch überlastete CPU und Speicher werden vermieden.<br>
+			<br>
+			Die für TNC3 angepasste NetNode Software nutzte nur einen Teil der im TNC3 vorhandenen Möglichkeiten, da sie ursprünglich für den 8 Bit Prozessor Z80 konzipiert war. Die 1995 fertiggestellte Version von ThreeNet wurde speziell für das TNC3 völlig neu geschrieben. Dabei konnten verschiedene Mängel behoben werden, die Programme wurden überarbeitet, verbessert und auf den aktuellen Stand gebracht. Das neue Programm läuft unter dem bewährten TNC3-Betriebssystem als selbständiger Prozess, gleichzeitig können andere Programme, z.B. Mailbox oder Hostmode, laufen. Es ist möglich, weitere Prozesse im TNC3 ablaufen zu lassen, z.B. andere Knotenprotokolle, TCP/IP-Router oder Steuerprogramme für Geräteüberwachung.<br>
+			<br>
+			In der aktuellen Version von ThreeNet wurde ein Autorouter für das verbreitete FlexNet-Protokoll (RMNC) sowie für TCP/IP Anwendungen eingebaut. Ein Hayes-Interpreter wird voraussichtlich in zukünftigen Versionen verfügbar sein..</p>
+		<h3>Datennetze</h3>
+		<p>Der Zweck eines Datennetzes besteht darin, Nachrichten von jeder Stelle zu jeder anderen Stelle zu transportieren. Dies soll möglichst schnell und zuverlässig geschehen.<br>
+			<br>
+			Eine einfache (Daten-) Funkverbindung zwischen zwei Stationen ist noch kein Datennetz. Daten werden in diesem Fall weder vermittelt noch weitergereicht, es existiert nur EIN möglicher Verbindungsweg. Auch wenn mehrere Stationen jeweils paarweise Daten austauschen ist das noch kein Netz.<br>
+			<br>
+			Erst wenn einzelne oder alle Stationen die Möglichkeit besitzen, empfangene Daten weiterzusenden, spricht man von einem Netz. Die Stationen, welche Daten von einer Station empfangen und an andere Stationen weitergeben nennt man Netzknoten, Knoten, Node oder allgemein 'Digipeater'. Im Gegensatz zu den Knoten werden die übrigen Stationen als 'user' (Benutzer) bezeichnet. Die User sind die Stationen, die die Daten ursprünglich erzeugen und empfangen, während die Knoten die Daten nur weiterreichen.<br>
+			<br>
+			Eine der einfachsten Strukturen hat das sternförmige Netz. Die User können nur über den zentralen Knoten in der Mitte kommunizieren. Direkte Verbindungen zwischen den Usern existieren nicht. Die Wege zwischen beliebigen Usern liegen fest, es gibt keine Ausweichmöglichkeiten. Der zentrale Knoten sendet die Daten an alle User in gleicher Weise aus. Vorteil: der zentrale Knoten hat die vollständige Kontrolle über den Datenverkehr. Fällt er aber aus, dann geht nichts mehr.<br>
+			<br>
+			Eine Erweiterung des sternförmigen Netzes ist die Backbone (=Rückgrat)-Struktur. Die Funktionen des zentralen Knotens sind auf mehrere Knoten verteilt. Die Knoten sind im allgemeinen durch eine schnelle Verbindung miteinander gekoppelt und über einen größeren geographischen Bereich verteilt. Zur Vermittlung von Datenpaketen zwischen zwei Usern benötigen die Knoten nun eine weitere Funktion: sie müssen entscheiden, in welche Richtung, d.h. zu welchem Nachbarknoten die Daten weitergegeben werden sollen. Diese Funktion nennt man Wegesuche oder Routing. Es gibt zwischen zwei beliebigen Usern nur EINEN möglichen Verbindungsweg. Die Vorteile dieser Netzstruktur: Feste Wege, große Reichweite. Nachteil: Ausfall eines Knotens legt nahezu das gesamte Netz lahm.<br>
+			<br>
+			Das vermaschte Netz hat eine weitere Eigenschaft: Zwischen den Knoten bestehen mehrere alternative Wege. Knoten A kann Knoten B zwar direkt erreichen, es sind jedoch auch die Wege A-E-B, A-E-F-B oder A-C-D-E-F und A-C-D-E-B möglich. Die Verbindungen sind nicht mehr sternförmig, es existieren Maschen in diesem Netz. Für die Knoten besteht nun die Notwendigkeit, aus den vielen alternativen Wegen zwischen zwei Knoten den besten zu ermitteln.<br>
+			<br>
+			Es gibt möglicherweise andere (weitere oder kompliziertere) Wege die unsere Daten schneller ans Ziel bringen:<br>
+			<br>
+			Der direkte Weg zwischen A und B ist möglicherweise der langsamste. Umwege führen manchmal schneller ans Ziel.<br>
+			<br>
+			<br>
+			Die Knoten müssen in vermaschten Netzen in der Lage sein, von mehreren Wegen den besten auszusuchen. Grundsätzlich gibt es dazu zwei Möglichkeiten:<br>
+			<br>
+			statisches Netz: Jeder Knoten besitzt eine unveränderliche (aber veränderbare) Tabelle, in der Informationen über das Netz (Nachbarknoten, Strecken etc.) durch den Operator eingetragen werden. Die Entscheidung, welche Strecke von A nach B verwendet werden soll trifft prinzipiell der Betreiber bzw. Operator durch den Eintrag in die Listen. Das Verfahren ist absolut stabil und arbeitet sehr zuverlässig, sofern die eingetragenen Verbindungswege auch tatsächlich immer verfügbar sind. Ein Austausch von Daten zur Netzverwaltung zwischen den Netzknoten ist nicht notwendig. Fällt eine Strecke aus, muß durch einen Eingriff des Operators eine Ersatzstrecke geschaltet werden. Bei hoher Belastung bestimmter Strecken kann es zu Wartezeiten kommen, obwohl möglicherweise alternative Verbindungen zur Verkehrsentlastung genutzt werden könnten. Ein in USA gängiges System ist unter der Bezeichnung 'ROSE' bekannt.<br>
+			<br>
+			dynamisches Netz: durch ständigen Informationsaustausch zwischen den Knoten kann die Leistungsfähigkeit jeder Linkstrecke präzise beurteilt werden. Damit ist es jederzeit möglich, zwischen zwei beliebigen Knoten den optimalen Weg zu berechnen. Ändert sich die Struktur des Netzes (etwa durch Ausfall eines Knotens oder durch Installation eines neuen Knotens), dann spiegelt sich dies in den Dateien wieder, die als Grundlage für die Wegoptimierung dienen. Bei sehr starker Auslastung bestimmter Strecken sinkt die Qualität dieser Links. Das Netz reagiert automatisch, indem es diese Strecke als 'schlecht' meidet und andere, bessere (weil weniger belastete) Strecken bevorzugt. Damit ist eine problemlose Lastverteilung zwischen mehreren parallelen Strecken gewährleistet. Nachteil des dynamischen Netzes ist, dass ein gewisser 'Verwaltungsaufwand' (Overhead) die Strecken zusätzlich belastet. Großer Vorteil: Ein dynamisches Netz benötigt keinen Operator, der sich zuverlässig um den Zustand jeder Strecke kümmert. Wenn jeder Knoten, wie es in den privaten Funkdatennetzen ja der Fall ist, von einem anderen Operator betrieben wird, ist ein netzwerk-weites Management nicht möglich. Gerade für Netzknoten die nicht mit 100%iger Wahrscheinlichkeit verfügbar sind, eignet sich die dynamische Wegeoptimierung sehr gut.<br>
+			<br>
+			Die ThreeNet Software unterstützt dynamisches Routing. Die Qualität der Linkstrecken wird ständig kontrolliert und damit die Grundlage geschaffen, dass jedes Datenpaket auf dem optimalen Weg durchs Netz geschickt wird. Bei Überlastung einzelner Strecken werden alternative Wege verwendet, dadurch steigt der Durchsatz im Vergleich zu statischen Netzen. Bei Ausfall von Strecken reagiert das Netz rasch, indem es alternative Wege schaltet. Neu hinzukommende Strecken werden ohne Zutun vom Netz erkannt und in die bestehende Netzstruktur eingebunden. ThreeNet ist mit drei verbreiteten Netzwerkprotokollen kompatibel: TheNet (TNN, NET-ROM etc.) und FlexNet (RMNC) und TCP/IP. Welches Netzwerkprotokoll verwendet wird ist konfigurierbar, es können auch alle drei Protokolle parallel gefahren werden.</p>
+			<h3>Wegesuche (Routing im Netz)</h3>
+			<p>Die exakte Funktion der Netzwerkprotokolle ist sehr kompliziert, wir wollen daher die grundlegenden Funktionen nur oberflächlich erklären. Auf Unterschiede zwischen den verschiedenen Protokollen wird dabei nicht eingegangen.<br>
+				<br>
+				ThreeNet benötigt Informationen über den Zustand des Netzes. Nur wenn die Knoten über zuverlässige und aktuelle Daten über Nachbarknoten, Streckenqualitäten etc. verfügen kann der Routing-Algorithmus gut arbeiten. Dazu senden die Knoten immer wieder sogenannte 'Broadcast'-Meldungen aus, die von allen benachbarten Knoten empfangen werden. Die Broadcast-Meldung hat sinngemäß folgenden Inhalt:<br>
+				<br>
+				- Hallo, hier ist der Knoten XYZ. Ich begrüße meine Nachbarknoten, die mich jetzt hören können<br>
+				<br>
+				- Folgende Knoten sind von mir aus erreichbar (Laufzeit): A (10), B(22), C(40), D(3), E(80) ....<br>
+				<br>
+				Die Broadcasts werden regelmäßig (z.B. alle 10 Minuten) gesendet. ThreeNet sendet Broadcasts außerdem immer dann, wenn wesentliche Änderungen im Netz auftreten, z.B. Ausfall eines Knotens.<br>
+				<br>
+				Nachbarknoten sind die Knoten, deren Broadcasts empfangen werden können. Die Nachbarknoten werden in der Nodes-Liste bzw. Links-Liste, sowie in die Destinations-Liste (siehe unten) eingetragen. Meldet sich ein Nachbarknoten eine Weile nicht mehr, so wird er nach einiger Zeit aus der Liste gelöscht, da man davon ausgehen muß, dass die Strecke oder der Knoten nicht mehr funktioniert. Wird ein Broadcast das erste Mal empfangen, so 'wartet' ThreeNet einige weitere Broadcasts ab bevor er den neu aufgetauchten Knoten in die Liste aufnimmt. Dies verhindert, dass plötzlich Knoten in den Listen auftauchen, die nur (z.B. durch kurzlebige Überreichweiten) sporadisch empfangen werden können.<br>
+				<br>
+				Von der Existenz aller übrigen Netzknoten erfährt ThreeNet nur über die Listen, die per Broadcast von den Nachbarknoten empfangen werden. Die Gesamtliste aller im Netz bekannten Knoten wird 'Destinations-Liste' oder 'Nodes-Liste' genannt und ist in jedem Knoten vorhanden. Zu jeder Knotenadresse (Rufzeichen) ist eine gemittelte Laufzeit gespeichert, sowie die Adresse des Nachbarknotens, über den das Ziel mit dieser Laufzeit erreicht werden kann.<br>
+				<br>
+				Datenpakete werden stets zu dem Nachbarknoten weitergeleitet, der in seiner Broadcast-Meldung die beste Laufzeit zu dem Bestimmungsknoten eingetragen hat.<br>
+				<br>
+				Nun laufen durch ein reales Netz ständig große Datenmengen, die die Linkstrecken zwischen den Netzknoten belasten und die Verbindungsqualität verringern. Das Netz reagiert damit, indem es andere, weniger belastete Strecken verwendet und die stark belasteten Strecken entlastet. Dies klingt vernünftig, bringt jedoch einige Probleme: sobald eine Strecke entlastet wurde, steigt deren Qualität wieder an, die Ausweichstrecke dagegen wird schlechter. Damit kehren sich die Verhältnisse um und man hat nichts gewonnen. Das Netz ist instabil, da die Wege ständig hin- und her gehen. Über derartige Effekte gibt es zahlreiche theoretische Arbeiten. Um ein stabiles Routing zu gewährleisten müssen die komplexen dynamischen Eigenschaften eines realen Datennetzes berücksichtigt werden. Durch die relativ großen Broadcast-Intervalle wird außerdem sichergestellt, dass das Routing nicht in allzu kurzen Abständen hin- und hergeschaltet wird.</p><br>
+				<h3>Verbindungsaufbau im Netz</h3>
+				<p>Zum Aufbau einer Verbindung zwischen zwei Usern wird zuerst ein normaler Connect zwischen dem User 1 und dem sogenannten Einstiegsdigi hergestellt. Von dort aus wird mit dem Kommando C die Verbindung innerhalb des Netzes angefordert und wie oben hergestellt. Nun ist User1 mit dem Ausstiegsknoten verbunden, von dem aus er wieder mit dem C Kommando den User 2 (der natürlich vom Ausstiegsknoten aus erreichbar sein muß) connected.<br>
+					<br>
+					Die Teilnehmer (User) in einem Datennetz verwenden die übliche Packet-Radio Funktionen und haben im Netz nicht die Funktion eines Knotens. Sie senden keine Broadcasts aus, führen keine Nodes-Listen und können mit den Broadcasts der Knoten nichts anfangen. Die Adressen der User werden von den Knoten nicht gespeichert. Zum Aufbau einer Verbindung zwischen zwei Usern muß also stets bekannt sein, über welchen Knoten man ins Netz einsteigt und über welchen Ausstiegsknoten der Partner erreicht werden kann. Den Weg der Daten zwischen Einstiegs- und Ausstiegsknoten zu finden ist dagegen Sache des Netzes.<br>
+					<br>
+					<br>
+					Hier ein Beispiel<br>
+					<br>
+					<br>
+					Die User  Silke wollen eine Verbindung herstellen. ist über den (Einstiegs-) Knoten NODE1 erreichbar, Silke über den (Ausstiegs-) Knoten NODE2.<br>
+					<br>
+					* C NODE1 Verbindung mit dem Einstiegsknoten herstellen (TNC-Befehl)<br>
+					<br>
+					Der Knoten antwortet mit der Login-Meldung, etwa<br>
+					<br>
+					ThreeNet V0.09 * Willkommen beim Knoten NODE1<br>
+					<br>
+					Hilfestellung mit : Help<br>
+					<br>
+					Bitte Aktuell lesen mit : NEWS<br>
+					<br>
+					Lokale Mailbox mit : BBS<br>
+					<br>
+					=><br>
+					<br>
+					Hier gibt man den Verbindungswunsch zum Ausstiegsknoten ein:<br>
+					<br>
+					=> C NODE2<br>
+					<br>
+					es meldet sich der Ausstiegsknoten etwa so:<br>
+					<br>
+					3Net V0.1 * Hier ist NODE2 in Lingen<br>
+					<br>
+					=><br>
+					<br>
+					nun stellt man die Verbindung zum Partner her:<br>
+					<br>
+					=> C Silke<br>
+					<br>
+					Wenn alles klappt kommt die Antwort, dass eine Verbindung hergestellt ist. Falls der User oder einer der angegebenen Knoten nicht erreichbar ist kommt eine Fehlermeldung.</p>
+    </div>
+</div> 
